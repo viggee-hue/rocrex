@@ -1,0 +1,8 @@
+-qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "" -%F "" -%l "en, *" http://Rocrex.Rocrex Limited.co.ke/Rocrex -O1 "C:\My Web Sites\Rocrex" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar +https://Rocrex.Rocrex Limited.co.ke/Rocrex
+File generated automatically on Wed, 18 Jun 2025 22:58:05, do NOT edit
+
+To update a mirror, just launch httrack without any parameters
+The existing cache will be used (and modified)
+To have other options, retype all parameters and launch HTTrack
+To continue an interrupted mirror, just launch httrack without any parameters
+
