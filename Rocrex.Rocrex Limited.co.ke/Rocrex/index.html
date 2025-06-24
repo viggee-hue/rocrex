@@ -87,6 +87,7 @@
 
 
 <style type="text/css">
+
 html, body {
   margin: 0;
   padding: 0;
@@ -156,6 +157,222 @@ html, body {
   padding: 13px;
   font-size: 21px;
 }
+  .compact-3d-counter {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    perspective: 1000px;
+    border-radius: 12px;
+    margin: 20px auto;
+    max-width: 900px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  }
+  
+  .counter-heading {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .counter-heading::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background: rgba(255,255,255,0.5);
+  }
+  
+  .counter-line {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    transform-style: preserve-3d;
+  }
+  
+  .compact-counter-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transform-style: preserve-3d;
+  }
+  
+  .compact-counter-number {
+    font-size: 1.8rem;
+    font-weight: 700;
+    position: relative;
+    transform-style: preserve-3d;
+    min-width: 30px;
+    text-align: center;
+  }
+  
+  .compact-counter-suffix {
+    font-size: 1rem;
+    opacity: 0.8;
+    transform: translateZ(5px);
+  }
+  
+  .compact-counter-title {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+    margin-right: 8px;
+    transform: translateZ(5px);
+  }
+  
+  @media (max-width: 600px) {
+    .counter-line {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    
+    .counter-heading {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+    }
+  }
+  .data-safety-section {
+    background: #f8faff;
+    padding: 80px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .data-safety-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .data-safety-heading {
+    font-size: 2.2rem;
+    color: #1a1a2e;
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.3;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding: 0 20px;
+  }
+  
+  .data-safety-heading a {
+    color: #4a6cf7;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .compliance-carousel {
+    position: relative;
+    padding: 30px 0;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .compliance-slider {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    width: max-content;
+    will-change: transform;
+  }
+  
+  .compliance-slide {
+    flex: 0 0 auto;
+    width: 200px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    padding: 20px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.03);
+  }
+  
+  .compliance-slide img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(100%) contrast(80%);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+  }
+  
+  .compliance-slide:hover img {
+    filter: grayscale(0) contrast(100%);
+    opacity: 1;
+  }
+
+  /* Logo-specific sizing adjustments */
+  .compliance-slide:nth-child(1) img { /* HIPAA */
+    width: 140px;
+  }
+  .compliance-slide:nth-child(2) img { /* Data Protection */
+    width: 160px;
+  }
+  .compliance-slide:nth-child(3) img { /* ICT */
+    width: 120px;
+  }
+  .compliance-slide:nth-child(4) img { /* HL7 */
+    width: 100px;
+  }
+
+  /* Responsive */
+  @media (max-width: 992px) {
+    .data-safety-heading {
+      font-size: 1.8rem;
+    }
+    .compliance-slide {
+      width: 180px;
+      height: 110px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .compliance-slide {
+      width: 160px;
+      height: 100px;
+      padding: 15px;
+    }
+    .compliance-slider {
+      gap: 30px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .data-safety-heading {
+      font-size: 1.5rem;
+    }
+    .compliance-slide {
+      width: 140px;
+      height: 90px;
+      padding: 12px;
+    }
+    .compliance-slider {
+      gap: 20px;
+    }
+  }
 </style>
 <meta name="google-site-verification" content="sb739fzpJqJzbEE79G43WYUkJWjO3pnmV3iVyxV8oEg" />
 <!--Start of Zendesk Chat Script-->
@@ -939,6 +1156,46 @@ Landed Cost Voucher, Quality Inspection</p>
 
 </div>
 
+<!-- HTML Section -->
+<section class="data-safety-section">
+  <div class="data-safety-container">
+    <h3 class="data-safety-heading">Prioritizing <a href="https://www.odpc.go.ke/wp-content/uploads/2024/02/ODPC-Guidance-Note-on-Processing-of-Health-Data.pdf">Patient Data Safety & Privacy</a> with Industry-leading Compliance</h3>
+    
+    <div class="compliance-carousel">
+      <div class="compliance-slider">
+        <!-- HIPAA -->
+        <div class="compliance-slide">
+          <img src="https://www.medbookafrica.com/wp-content/uploads/2024/11/Hippa_Logo-removebg-preview.png" alt="HIPAA Compliance">
+        </div>
+        
+        <!-- Data Protection -->
+        <div class="compliance-slide">
+          <img src="https://www.medbookafrica.com/wp-content/uploads/2024/11/Data-Protection-Logo.png" alt="Data Protection">
+        </div>
+        
+        <!-- ICT -->
+        <div class="compliance-slide">
+          <img src="https://www.medbookafrica.com/wp-content/uploads/2024/11/ICT-Logo.png" alt="ICT Compliance">
+        </div>
+        
+        <!-- HL7 -->
+        <div class="compliance-slide">
+          <img src="https://www.medbookafrica.com/wp-content/uploads/2024/11/HL7-Logo.png" alt="HL7 Standards">
+        </div>
+        
+        <!-- Repeats for seamless looping -->
+        <div class="compliance-slide">
+          <img src="https://www.medbookafrica.com/wp-content/uploads/2024/11/Hippa_Logo-removebg-preview.png" alt="HIPAA Compliance">
+        </div>
+        <div class="compliance-slide">
+          <img src="https://www.medbookafrica.com/wp-content/uploads/2024/11/Data-Protection-Logo.png" alt="Data Protection">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
  <section class="" style="background-color:#fff">
   <div class="container pad50" >
    <p class="common-head text-center"><span> Software Partners </span></p><span class="short-bottom"></span><br>
@@ -975,95 +1232,7 @@ Landed Cost Voucher, Quality Inspection</p>
  </div>
 </div>
 </section>
-<style>
-  .compact-3d-counter {
-    background: linear-gradient(135deg, #1a1a2e, #16213e);
-    color: white;
-    padding: 30px 20px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    perspective: 1000px;
-    border-radius: 12px;
-    margin: 20px auto;
-    max-width: 900px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-  }
-  
-  .counter-heading {
-    font-size: 1.5rem;
-    margin-bottom: 25px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    position: relative;
-    display: inline-block;
-  }
-  
-  .counter-heading::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
-    height: 2px;
-    background: rgba(255,255,255,0.5);
-  }
-  
-  .counter-line {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    transform-style: preserve-3d;
-  }
-  
-  .compact-counter-item {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    transform-style: preserve-3d;
-  }
-  
-  .compact-counter-number {
-    font-size: 1.8rem;
-    font-weight: 700;
-    position: relative;
-    transform-style: preserve-3d;
-    min-width: 30px;
-    text-align: center;
-  }
-  
-  .compact-counter-suffix {
-    font-size: 1rem;
-    opacity: 0.8;
-    transform: translateZ(5px);
-  }
-  
-  .compact-counter-title {
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    opacity: 0.8;
-    margin-right: 8px;
-    transform: translateZ(5px);
-  }
-  
-  @media (max-width: 600px) {
-    .counter-line {
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-    }
-    
-    .counter-heading {
-      font-size: 1.3rem;
-      margin-bottom: 20px;
-    }
-  }
-</style>
+
 
 <div class="compact-3d-counter">
   <h3 class="counter-heading">10 Million+ Lives Touched Globally</h3>
@@ -1095,39 +1264,7 @@ Landed Cost Voucher, Quality Inspection</p>
   </div>
 </div>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const counters = document.querySelectorAll('.compact-counter-number');
-    const speed = 20000;
-    
-    function animateCounters() {
-      counters.forEach(counter => {
-        const target = +counter.getAttribute('data-target');
-        const count = +counter.innerText;
-        const increment = target / speed;
-        
-        if(count < target) {
-            counter.innerText = Math.ceil(count + increment);
-            setTimeout(animateCounters, 1);
-        } else {
-            counter.innerText = target;
-        }
-      });
-    }
-    
-    // Start animation when element is in view
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          animateCounters();
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.5 });
-    
-    observer.observe(document.querySelector('.compact-3d-counter'));
-  });
-</script>
+
 <section style="padding:30px 0px;background-color: #fff">
   <div class="container">
     <div class="col-md-12">
@@ -1836,6 +1973,134 @@ opacity: 1;">&times;</button>
   function solutions() {
     window.scrollTo(0, 1780);
   }
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const slider = document.querySelector('.compliance-slider');
+  const slides = document.querySelectorAll('.compliance-slide');
+  let animationFrame;
+  let speed = 1; // pixels per frame
+  let isScrolling = true;
+  let touchStartX = 0;
+  let isDragging = false;
+  
+  // Auto-scroll function
+  function autoScroll() {
+    if (!isScrolling) return;
+    
+    const firstSlide = slider.firstElementChild;
+    const slideWidth = firstSlide.offsetWidth + 40; // width + gap
+    
+    // Get current transform value
+    const transform = window.getComputedStyle(slider).getPropertyValue('transform');
+    let currentX = 0;
+    
+    if (transform !== 'none') {
+      const matrix = transform.match(/^matrix\((.+)\)$/);
+      if (matrix) currentX = parseInt(matrix[1].split(', ')[4]);
+    }
+    
+    currentX -= speed;
+    
+    // Reset position when we've scrolled enough
+    if (currentX <= -slideWidth * 4) { // 4 original slides
+      currentX = 0;
+    }
+    
+    slider.style.transform = `translateX(${currentX}px)`;
+    animationFrame = requestAnimationFrame(autoScroll);
+  }
+  
+ 
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      isScrolling = entry.isIntersecting;
+      if (isScrolling) {
+        animationFrame = requestAnimationFrame(autoScroll);
+      } else {
+        cancelAnimationFrame(animationFrame);
+      }
+    });
+  }, { threshold: 0.1 });
+  
+  observer.observe(document.querySelector('.data-safety-section'));
+  
+  // Pause on hover
+  const carousel = document.querySelector('.compliance-carousel');
+  carousel.addEventListener('mouseenter', () => {
+    isScrolling = false;
+  });
+  
+  carousel.addEventListener('mouseleave', () => {
+    isScrolling = true;
+    animationFrame = requestAnimationFrame(autoScroll);
+  });
+  
+  // Touch support
+  carousel.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+    isDragging = true;
+    isScrolling = false;
+  });
+  
+  carousel.addEventListener('touchmove', (e) => {
+    if (!isDragging) return;
+    const x = e.touches[0].clientX;
+    const diff = touchStartX - x;
+    const transform = window.getComputedStyle(slider).getPropertyValue('transform');
+    let currentX = 0;
+    
+    if (transform !== 'none') {
+      const matrix = transform.match(/^matrix\((.+)\)$/);
+      if (matrix) currentX = parseInt(matrix[1].split(', ')[4]);
+    }
+    
+    slider.style.transform = `translateX(${currentX - diff}px)`;
+    touchStartX = x;
+  });
+  
+  carousel.addEventListener('touchend', () => {
+    isDragging = false;
+    isScrolling = true;
+    animationFrame = requestAnimationFrame(autoScroll);
+  });
+  
+  // Start the animation
+  animationFrame = requestAnimationFrame(autoScroll);
+});
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const counters = document.querySelectorAll('.compact-counter-number');
+    const speed = 20000;
+    
+    function animateCounters() {
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = target / speed;
+        
+        if(count < target) {
+            counter.innerText = Math.ceil(count + increment);
+            setTimeout(animateCounters, 1);
+        } else {
+            counter.innerText = target;
+        }
+      });
+    }
+    
+    // Start animation when element is in view
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounters();
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    
+    observer.observe(document.querySelector('.compact-3d-counter'));
+  });
 </script>
 <script src="diag-js/imagesloaded.pkgd.min.js"></script>
 <script src="diag-js/charming.min.js"></script>
